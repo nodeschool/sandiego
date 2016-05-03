@@ -1,0 +1,28 @@
+<a href="/">Return Home</a>
+
+{{#if status}}
+    <div class="status">
+        {{status}}
+    </div>
+{{/if}}
+
+<form action="/submit" method="post">
+    <div>
+        <label for="title">Title: </label>
+        <input type="text" id="title" name="title">
+    </div>
+
+    <div>
+        <label for="url">URL: </label>
+        <input type="text" id="url" name="url">
+    </div>
+
+    <div>
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name">
+    </div>
+
+    <div>
+        <input type="submit" value="Submit">
+    </div>
+</form>

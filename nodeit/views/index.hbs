@@ -1,0 +1,20 @@
+<a href="/submit">Submit Your Own Post</a>
+
+{{#each posts}}
+    <div class="post">
+        <div>
+            <span class="like-count">{{this.likes}}</span> Likes
+        </div>
+
+        <div class="content">
+            <strong>
+                <a href="{{this.link}}">{{this.title}}</a>
+                <small>by {{this.user}}</small>
+            </strong>
+        </div>
+
+        <div>
+            <a href="#" class="like-post" data-index="{{@index}}">Like</a>
+        </div>
+    </div>
+{{/each}}
