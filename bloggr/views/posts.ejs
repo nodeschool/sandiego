@@ -1,0 +1,31 @@
+<% include ./partials/header.ejs %>
+
+<div class="container pad-top">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h1>My Blog</h1>
+      <a class="new-post btn btn-primary" href="/new">Create New Post</a>
+      <% if(posts.length > 0) { %>
+        <% posts.forEach((post) => { %>
+          <div class="panel panel-default">
+            <a href="/<%= post.doc._id %>">
+              <div class="panel-body">
+                <h3><%= post.doc.title %></h3>
+                <hr />
+                <p class="capped"><%= post.doc.post %></p>
+              </div>
+            </a>
+            <div class="panel-footer">
+              <a class="btn btn-warning" href="/<%= post.doc._id%>/edit">Update</a>
+              <form class="inline-form" action="/<%= post.doc._id %>?_method=DELETE" method="POST">
+                <button class="btn btn-danger">Delete</button>
+              </form>
+            </div>
+          </div>
+        <% }) %>
+      <% } %>
+    </div>
+  </div>
+</div>
+
+<% include ./partials/footer.ejs %>
