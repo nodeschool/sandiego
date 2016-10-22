@@ -97,7 +97,7 @@ app.post('/', (req, res) => {
 //==========================
 app.get('/:id', (req, res) => {
 
-  // Get the post form the database
+  // Get the post from the database
   db.get(req.params.id, (err, found) => {
     // If there was an error, log it
     if(err) {
