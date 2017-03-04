@@ -1,0 +1,17 @@
+.App-header {
+  background-color: #222;
+  height: 75px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+.App-form {
+  width: 75%;
+  margin: 50px auto;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

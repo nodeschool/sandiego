@@ -63,15 +63,12 @@ db.allDocs({
 ```js
 db.post(post, function(err, created) {
   // If there was an error, log it
-  if (err) {
+  if (err || !created) {
     console.log(err);
-  }
-
-  if (created) {
+    res.sendStatus(500);
+  } else {
     return res.status(201).json(created);
   }
-
-  return res.sendStatus(500);
 });
 ```
 
